@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/homewala"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_infra"
+            android:icon="@drawable/infrastructure"
+            android:title="Infrastructure" />
+        <item
+            android:id="@+id/nav_academics"
+            android:icon="@drawable/academic"
+            android:title="Academics" />
+        <item
+            android:id="@+id/nav_placement"
+            android:icon="@drawable/placement"
+            android:title="Placement" />
+        <item
+            android:id="@+id/nav_amogh"
+            android:icon="@drawable/party"
+            android:title="Amogh" />
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/aboutus"
+            android:title="About Us" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/gallery"
+            android:title="Gallery" />
+        <item
+            android:id="@+id/nav_download"
+            android:icon="@drawable/download"
+            android:title="Downloads" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send" />
+        </menu>
+    </item>
+
+</menu>

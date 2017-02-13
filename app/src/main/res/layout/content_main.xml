@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.tejas.paras.bpibs.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <!--<LinearLayout-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:background="#003566"-->
+                    <!--android:paddingBottom="5dp"-->
+                    <!--android:paddingTop="5dp">-->
+
+                    <!--<LinearLayout-->
+                        <!--android:orientation="vertical"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight=".86">-->
+
+                        <!--<TextView-->
+                            <!--android:text="GOVERNMENT OF NCT OF DELHI"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:id="@+id/textView2"-->
+                            <!--android:textAlignment="center"-->
+                            <!--android:textColor="#EFBE50"-->
+                            <!--android:textSize="10sp" />-->
+
+                        <!--<TextView-->
+                            <!--android:text="BHAI PARMANAND INSTITUTE OF BUSINESS STUDIES"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:id="@+id/textView3"-->
+                            <!--android:textAlignment="center"-->
+                            <!--android:textColor="#EFBE50"-->
+                            <!--android:textSize="10sp" />-->
+
+                        <!--<TextView-->
+                            <!--android:text="भाई परमानन्द इंस्टिट्यूट ऑफ़ बिज़नस स्टडीज"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:id="@+id/textView4"-->
+                            <!--android:textAlignment="center"-->
+                            <!--android:textColor="#EFBE50"-->
+                            <!--android:textSize="10sp" />-->
+                    <!--</LinearLayout>-->
+
+                    <!--<LinearLayout-->
+                        <!--android:orientation="vertical"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight=".14">-->
+
+                        <!--<ImageView-->
+                            <!--android:layout_width="51dp"-->
+                            <!--android:layout_height="50dp"-->
+                            <!--android:src="@drawable/emblem"-->
+                            <!--android:id="@+id/imageView2" />-->
+                    <!--</LinearLayout>-->
+
+                <!--</LinearLayout>-->
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button_layout"
+                    android:layout_margin="10dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        app:srcCompat="@drawable/amogh1"
+                        android:id="@+id/imageView4"
+                        android:layout_height="200dp"
+                        android:layout_margin="10dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingLeft="20dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:srcCompat="@drawable/principal"
+                            android:id="@+id/imageView5"
+                            android:scaleType="fitStart"
+                            android:adjustViewBounds="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".9">
+
+                            <TextView
+                                android:text="Dr. Amita Dev"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView6"
+                                android:textAlignment="center"
+                                android:textSize="18sp"
+                                android:textStyle="normal|bold"
+                                android:textColor="#232323"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="5dp" />
+
+                            <TextView
+                                android:text="BPIBS Principal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView7"
+                                android:textAlignment="center"
+                                android:textColor="#5B5B5B"
+                                android:layout_weight="1" />
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.1">
+
+                            <Button
+                                android:id="@+id/expandableButton1"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:drawableRight="@drawable/down"
+                                android:onClick="expandableButton1"
+                                android:background="@null"
+                                android:paddingRight="10dp"
+                                android:layout_weight="1"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentEnd="true" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                        android:id="@+id/expandableLayout1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:ael_duration="1000"
+                        app:ael_expanded="false"
+                        app:ael_interpolator="bounce"
+                        app:ael_orientation="vertical">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="Dr. (Mrs.) Amita Dev is the recipient of National Level AICTE Young Teacher Career Award for advance research in Speech Recognition with connectionist model, a State Level Best Teacher Award from Government of NCT of Delhi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView8"
+                            android:textAlignment="center"
+                            android:textColor="#5B5B5B"
+                            android:layout_margin="5dp"
+                            android:layout_marginBottom="10dp" />
+                    </LinearLayout>
+                    </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingLeft="20dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:srcCompat="@drawable/vision"
+                            android:id="@+id/imageView11"
+                            android:scaleType="fitStart"
+                            android:adjustViewBounds="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".9">
+
+                            <TextView
+                                android:text="Vision"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView17"
+                                android:textAlignment="center"
+                                android:textSize="18sp"
+                                android:textStyle="normal|bold"
+                                android:textColor="#232323"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="5dp" />
+
+                            <TextView
+                                android:text="The Vision of BPIBS"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView18"
+                                android:textAlignment="center"
+                                android:textColor="#5B5B5B"
+                                android:layout_weight="1" />
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.1">
+
+                            <Button
+                                android:id="@+id/expandableButton2"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:drawableRight="@drawable/down"
+                                android:onClick="expandableButton2"
+                                android:background="@null"
+                                android:paddingRight="10dp"
+                                android:layout_weight="1"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentEnd="true" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                        android:id="@+id/expandableLayout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:ael_duration="1000"
+                        app:ael_expanded="false"
+                        app:ael_interpolator="bounce"
+                        app:ael_orientation="vertical">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:text="To foster an intellectual and ethical environment in which both skill and spirit will thrive so as to impart quality education through innovative teaching methodology, training and services with the Global outlook."
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView19"
+                                android:textAlignment="center"
+                                android:textColor="#5B5B5B"
+                                android:layout_margin="5dp"
+                                android:layout_marginBottom="10dp" />
+                        </LinearLayout>
+                    </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingLeft="20dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:srcCompat="@drawable/mission"
+                            android:id="@+id/imageView12"
+                            android:scaleType="fitStart"
+                            android:adjustViewBounds="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".9">
+
+                            <TextView
+                                android:text="Mission"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView20"
+                                android:textAlignment="center"
+                                android:textSize="18sp"
+                                android:textStyle="normal|bold"
+                                android:textColor="#232323"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="5dp" />
+
+                            <TextView
+                                android:text="The Mission of BPIBS"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView21"
+                                android:textAlignment="center"
+                                android:textColor="#5B5B5B"
+                                android:layout_weight="1" />
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.1">
+
+                            <Button
+                                android:id="@+id/expandableButton3"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:drawableRight="@drawable/down"
+                                android:onClick="expandableButton3"
+                                android:background="@null"
+                                android:paddingRight="10dp"
+                                android:layout_weight="1"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentEnd="true" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                        android:id="@+id/expandableLayout3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:ael_duration="1000"
+                        app:ael_expanded="false"
+                        app:ael_interpolator="bounce"
+                        app:ael_orientation="vertical">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:text="To become a World-Class State-of-the-art Centre in providing Quality Oriented Higher Education in line with the Global Standards in the field of Computer Science."
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView22"
+                                android:textAlignment="center"
+                                android:textColor="#5B5B5B"
+                                android:layout_margin="5dp"
+                                android:layout_marginBottom="10dp" />
+                        </LinearLayout>
+                    </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:background="#000000"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:text="FOLLOW US"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView9"
+                        android:textAlignment="center"
+                        android:textStyle="normal|bold"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:layout_marginBottom="10dp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:background="@drawable/instagram"
+                                android:id="@+id/imageView10"
+                                android:layout_margin="5dp" />
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:background="@drawable/youtube"
+                                android:id="@+id/imageView9"
+                                android:layout_weight="0.36"
+                                android:layout_margin="5dp" />
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:background="@drawable/twitter"
+                                android:id="@+id/imageView8"
+                                android:layout_margin="5dp" />
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:background="@drawable/googleplus"
+                                android:id="@+id/imageView7"
+                                android:layout_weight="1"
+                                android:layout_margin="5dp" />
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:background="@drawable/facebook"
+                                android:id="@+id/imageView6"
+                                android:layout_weight="1"
+                                android:layout_margin="5dp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:background="#28324E"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_margin="10dp"
+                        android:layout_marginBottom="10dp">
+
+                        <TextView
+                            android:text="Address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView12"
+                            android:textStyle="normal|bold"
+                            android:textColor="#ECEEEF"
+                            android:layout_marginBottom="4dp" />
+
+                        <TextView
+                            android:text="BHAI PARMANAND INSTITUTE OF BUSINESS STUDIES"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView11"
+                            android:textColor="#ECEEEF" />
+
+                        <TextView
+                            android:text="Opp. Madhuban Colony Shakarpur, Delhi-110092"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView10"
+                            android:textColor="#ECEEEF" />
+
+                        <TextView
+                            android:text="Contacts"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView13"
+                            android:textStyle="normal|bold"
+                            android:textColor="#ECEEEF"
+                            android:layout_marginBottom="4dp"
+                            android:layout_marginTop="15dp" />
+
+                        <TextView
+                            android:text="01122543891,22017393"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView15"
+                            android:textColor="#ECEEEF" />
+
+                        <TextView
+                            android:text="Email: - bpibs.delhi@nic.in,"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView14"
+                            android:textColor="#ECEEEF" />
+
+                        <TextView
+                            android:text="info@bpibs.in"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView16"
+                            android:textColor="#ECEEEF" />
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <com.google.android.gms.maps.MapView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/mapView" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</RelativeLayout>
