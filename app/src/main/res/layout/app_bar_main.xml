@@ -25,13 +25,13 @@
                 android:layout_marginLeft="10dp">
 
                 <ImageView
-                    android:layout_width="16dp"
+                    android:layout_width="18dp"
                     android:src="@drawable/drawer2"
                     android:id="@+id/imageView3"
                     android:onClick="drawer2"
                     android:layout_centerVertical="true"
                     android:layout_centerHorizontal="true"
-                    android:layout_height="16dp" />
+                    android:layout_height="18dp" />
             </RelativeLayout>
 
             <LinearLayout
@@ -74,7 +74,7 @@
                 android:layout_margin="10dp">
 
                 <ImageView
-                    android:layout_width="12dp"
+                    android:layout_width="16dp"
                     android:layout_height="24dp"
                     app:srcCompat="@drawable/menu"
                     android:id="@+id/imageView13"
