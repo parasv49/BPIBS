@@ -1,6 +1,8 @@
 package com.tejas.paras.bpibs;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.widget.Toast;
 
@@ -25,6 +27,7 @@ public class LoginActivity extends AsyncTask<String, Void, String> {
 
     public LoginActivity(Context context) {
         this.context = context;
+
     }
 
     protected void onPreExecute() {
@@ -39,7 +42,6 @@ public class LoginActivity extends AsyncTask<String, Void, String> {
         String link;
         BufferedReader bufferedReader;
         String result;
-
         try {
 
 
@@ -68,16 +70,20 @@ public class LoginActivity extends AsyncTask<String, Void, String> {
     @Override
     protected void onPostExecute(String result) {
         String jsonStr = result;
+
         if (jsonStr != null) {
             try {
                 JSONObject jsonObj = new JSONObject(jsonStr);
                 String query_result = jsonObj.getString("query_result");
                 if (query_result.equals("SUCCESS")) {
                     Toast.makeText(context, "Login Successful", Toast.LENGTH_SHORT).show();
-
+                    Intent intent = new Intent(context, teacher_home.class);
+                    context.startActivity(intent);
+                    ((Activity)context).finish();
 
                 } else if (query_result.equals("FAILURE")) {
                     Toast.makeText(context, "Login Failed", Toast.LENGTH_SHORT).show();
+
                 } else {
                     Toast.makeText(context, "Couldn't connect to remote database.", Toast.LENGTH_SHORT).show();
                 }
