@@ -1,5 +1,6 @@
 package com.tejas.paras.bpibs;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -101,7 +102,9 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_about) {
         } else if (id == R.id.nav_gallery) {
         } else if (id == R.id.nav_download) {
-
+        } else if (id == R.id.login) {
+            Intent in=new Intent(MainActivity.this,login.class);
+            startActivity(in);
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {

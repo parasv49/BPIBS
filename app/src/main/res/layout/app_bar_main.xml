@@ -20,9 +20,10 @@
             android:paddingTop="5dp">
 
             <RelativeLayout
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="10dp">
+                android:layout_marginLeft="10dp"
+                android:layout_weight=".08">
 
                 <ImageView
                     android:layout_width="18dp"
@@ -38,7 +39,7 @@
                 android:orientation="vertical"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight=".86">
+                android:layout_weight=".75">
 
                 <TextView
                     android:text="GOVERNMENT OF NCT OF DELHI"
@@ -69,9 +70,10 @@
             </LinearLayout>
 
             <RelativeLayout
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_margin="10dp">
+                android:layout_margin="10dp"
+                android:layout_weight=".03">
 
                 <ImageView
                     android:layout_width="16dp"
