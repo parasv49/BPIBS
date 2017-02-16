@@ -48,7 +48,7 @@
                     android:layout_weight=".5" />
 
                 <TextView
-                    android:text="Today's Date"
+                    android:text="Select Date"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView5"
