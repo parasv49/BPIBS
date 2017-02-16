@@ -102,6 +102,8 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_about) {
         } else if (id == R.id.nav_gallery) {
         } else if (id == R.id.nav_download) {
+            Intent in=new Intent(MainActivity.this,teacher_home.class);
+            startActivity(in);
         } else if (id == R.id.login) {
             Intent in=new Intent(MainActivity.this,login.class);
             startActivity(in);
