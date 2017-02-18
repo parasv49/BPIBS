@@ -5,15 +5,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#D4D4D4"
     android:id="@+id/splashscreen">
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:id="@+id/imageView"
-        android:layout_marginTop="145dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        app:srcCompat="@drawable/bpibsfinal" />
 
     <TextView
         android:text="Bhai Permanand Institute of Business Studies"
@@ -27,5 +18,15 @@
         android:layout_below="@+id/imageView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/imageView"
+        android:layout_marginTop="134dp"
+        app:srcCompat="@drawable/bpibsfinal1"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
