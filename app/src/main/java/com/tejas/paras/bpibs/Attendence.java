@@ -44,7 +44,7 @@ public class Attendence extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_attendence);
-
+        list=(ListView)findViewById(R.id.listview);
         b5=(Button)findViewById(R.id.button5);
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
@@ -54,16 +54,12 @@ public class Attendence extends AppCompatActivity{
         }
         getData();
 
-
-        Toast.makeText(Attendence.this,"3",Toast.LENGTH_LONG).show();
-
         b5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(Attendence.this,"1."+view, Toast.LENGTH_SHORT).show();
             }
         });
-
 
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
@@ -82,7 +78,7 @@ public class Attendence extends AppCompatActivity{
 
     protected void showList() {
         dataModels= new ArrayList<>();
-        list=(ListView)findViewById(R.id.listview);
+
         try {
 
             JSONObject jsonObj = new JSONObject(myJSON);
