@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -25,7 +26,7 @@ public class Attendence extends AppCompatActivity{
 
     String date, course, year,ID;
     String myJSON;
-
+    int id1;
     private static final String TAG_RESULTS = "result";
 
     String link;
@@ -34,6 +35,7 @@ public class Attendence extends AppCompatActivity{
     String result,data;
     ArrayList<HashMap<String, String>> personList;
     Button b5;
+    CheckBox ch;
     ListView list,listView;
     private DataModel dataModel;
     private ArrayList<DataModel> dataModels;
@@ -67,10 +69,7 @@ public class Attendence extends AppCompatActivity{
             public void onItemClick(AdapterView<?> a, View v, int position,
                                     long id) {
                  dataModel = dataModels.get(position);
-                Toast.makeText(Attendence.this,"2.1",Toast.LENGTH_LONG).show();
-                 ID=dataModel.getID();
-                    Toast.makeText(Attendence.this,dataModel.getRoll(),Toast.LENGTH_LONG).show();
-
+                Toast.makeText(Attendence.this,dataModel.getRoll()+" "+dataModel.getID()+" "+dataModel.getName(),Toast.LENGTH_LONG).show();
             }
         });
     }

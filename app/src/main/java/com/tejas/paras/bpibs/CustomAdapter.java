@@ -17,6 +17,7 @@ public class CustomAdapter extends ArrayAdapter<DataModel> implements View.OnCli
 
     private ArrayList<DataModel> dataSet;
     Context mContext;
+    boolean[] checkBoxState;
 
     // View lookup cache
     private static class ViewHolder {
@@ -29,6 +30,7 @@ public class CustomAdapter extends ArrayAdapter<DataModel> implements View.OnCli
         super(context, R.layout.item_layout, data);
         this.dataSet = data;
         this.mContext=context;
+        checkBoxState=new boolean[data.size()];
 
     }
 
@@ -45,10 +47,10 @@ public class CustomAdapter extends ArrayAdapter<DataModel> implements View.OnCli
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        // Get the data item for this position
+
         DataModel dataModel = getItem(position);
-        // Check if an existing view is being reused, otherwise inflate the view
-        ViewHolder viewHolder; // view lookup cache stored in tag
+
+        ViewHolder viewHolder;
 
         final View result;
 
@@ -69,10 +71,25 @@ public class CustomAdapter extends ArrayAdapter<DataModel> implements View.OnCli
             viewHolder = (ViewHolder) convertView.getTag();
             result=convertView;
         }
+
         lastPosition = position;
         viewHolder.name.setText(dataModel.getName());
         viewHolder.roll.setText(dataModel.getRoll());
         viewHolder.id.setText(dataModel.getID());
+        viewHolder.id.setChecked(checkBoxState[position]);
+        final int a= position;
+        viewHolder.id.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                if(((CheckBox)v).isChecked())
+
+                    checkBoxState[a]=true;
+                else
+                    checkBoxState[a]=false;
+
+            }
+        });
+
 
         return convertView;
     }
