@@ -3,9 +3,11 @@ package com.tejas.paras.bpibs;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.ListAdapter;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
-import android.widget.SimpleAdapter;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -19,31 +21,31 @@ import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class Attendence extends AppCompatActivity {
+public class Attendence extends AppCompatActivity{
 
-    String date, course, year;
+    String date, course, year,ID;
     String myJSON;
 
     private static final String TAG_RESULTS = "result";
-    private static final String TAG_ID = "id";
-    private static final String TAG_NAME = "name";
-    private static final String TAG_ADD = "roll";
 
     String link;
     JSONArray peoples = null;
     BufferedReader bufferedReader;
     String result,data;
     ArrayList<HashMap<String, String>> personList;
+    Button b5;
+    ListView list,listView;
+    private DataModel dataModel;
+    private ArrayList<DataModel> dataModels;
+    private static CustomAdapter adapter;
 
-    ListView list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_attendence);
 
-        list = (ListView) findViewById(R.id.listview);
-        personList = new ArrayList<HashMap<String, String>>();
+        b5=(Button)findViewById(R.id.button5);
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             date = extras.getString("Date");
@@ -53,11 +55,34 @@ public class Attendence extends AppCompatActivity {
         getData();
 
 
+        Toast.makeText(Attendence.this,"3",Toast.LENGTH_LONG).show();
 
+        b5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(Attendence.this,"1."+view, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> a, View v, int position,
+                                    long id) {
+                 dataModel = dataModels.get(position);
+                Toast.makeText(Attendence.this,"2.1",Toast.LENGTH_LONG).show();
+                 ID=dataModel.getID();
+                    Toast.makeText(Attendence.this,dataModel.getRoll(),Toast.LENGTH_LONG).show();
+
+            }
+        });
     }
 
-    protected void showList() {
 
+    protected void showList() {
+        dataModels= new ArrayList<>();
+        list=(ListView)findViewById(R.id.listview);
         try {
 
             JSONObject jsonObj = new JSONObject(myJSON);
@@ -65,30 +90,18 @@ public class Attendence extends AppCompatActivity {
 
             for (int i = 0; i < peoples.length(); i++) {
                 JSONObject c = peoples.getJSONObject(i);
-                String id = c.getString("id");
-                String name = c.getString("name");
-                String roll = c.getString("roll");
 
-                HashMap<String, String> persons = new HashMap<String, String>();
-                persons.put("roll", roll);
-                persons.put("name", name);
-                persons.put("id", id);
-
-                personList.add(persons);
+                dataModels.add(new DataModel(c.getString("name"),c.getString("id"),  c.getString("roll")));
             }
-            ListAdapter adapter = new SimpleAdapter(
-                    Attendence.this, personList, R.layout.item_layout,
-                    new String[]{"roll","id","name"},
-                    new int[]{R.id.roll, R.id.id, R.id.name}
-            );
-
+            adapter = new CustomAdapter(dataModels, getApplicationContext());
             list.setAdapter(adapter);
 
-        } catch (JSONException e) {
+        }
+        catch (JSONException e) {
             e.printStackTrace();
         }
-
     }
+
 
     public void getData() {
         class GetDataJSON extends AsyncTask<String, Void, String> {
@@ -130,6 +143,8 @@ public class Attendence extends AppCompatActivity {
         GetDataJSON g = new GetDataJSON();
         g.execute();
     }
+
+
 }
 
 
