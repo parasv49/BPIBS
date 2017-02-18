@@ -10,10 +10,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
@@ -41,26 +38,34 @@ public class LoginActivity extends AsyncTask<String, Void, String> {
 
         String link;
         BufferedReader bufferedReader;
-        String result;
+        String result,data;
         try {
 
 
-            link = "http://painnation.esy.es/login_teacher.php";
+//            link = "http://painnation.esy.es/login_teacher.php";
+//            URL url = new URL(link);
+//            HttpURLConnection con = (HttpURLConnection) url.openConnection();
+//            con.setRequestMethod("POST");
+//            con.setDoOutput(true);
+//            con.setDoInput(true);
+//            OutputStream outputStream = con.getOutputStream();
+//            BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
+//            String post_data = URLEncoder.encode("id","UTF-8")+"="+URLEncoder.encode(id,"UTF-8")+"&"
+//                    +URLEncoder.encode("pass","UTF-8")+"="+URLEncoder.encode(pass,"UTF-8");
+//            bufferedWriter.write(post_data);
+//            bufferedWriter.flush();
+//            bufferedWriter.close();
+//            outputStream.close();
+
+            data = "?id=" + URLEncoder.encode(id, "UTF-8");
+            data += "&pass=" + URLEncoder.encode(pass, "UTF-8");
+
+            link = "http://painnation.esy.es/login_teacher.php" + data;
             URL url = new URL(link);
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
-            con.setRequestMethod("POST");
-            con.setDoOutput(true);
-            con.setDoInput(true);
-            OutputStream outputStream = con.getOutputStream();
-            BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
-            String post_data = URLEncoder.encode("id","UTF-8")+"="+URLEncoder.encode(id,"UTF-8")+"&"
-                    +URLEncoder.encode("pass","UTF-8")+"="+URLEncoder.encode(pass,"UTF-8");
-            bufferedWriter.write(post_data);
-            bufferedWriter.flush();
-            bufferedWriter.close();
-            outputStream.close();
             bufferedReader = new BufferedReader(new InputStreamReader(con.getInputStream()));
             result = bufferedReader.readLine();
+
             return result;
         } catch (Exception e) {
             return new String("Exception: " + e.getMessage());
