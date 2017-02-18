@@ -65,9 +65,9 @@ public class teacher_home extends AppCompatActivity {
 
         List<String> year = new ArrayList<>();
         year.add("--Select--");
-        year.add("1st");
-        year.add("2nd");
-        year.add("3rd");
+        year.add("1");
+        year.add("2");
+        year.add("3");
 
 
         ArrayAdapter<String> dataAdapter2 = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, year);
@@ -93,8 +93,15 @@ public class teacher_home extends AppCompatActivity {
     }
     public void attendence(View v)
     {
+        String date=tv5.getText().toString();
+        String course=sp1.getSelectedItem().toString();
+        String year=sp2.getSelectedItem().toString();
         Intent in=new Intent(teacher_home.this,Attendence.class);
+        in.putExtra("Date",date);
+        in.putExtra("Course",course);
+        in.putExtra("Year",year);
         startActivity(in);
+
     }
 
 }
